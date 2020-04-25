@@ -311,7 +311,7 @@ def buildDecisionTree(df, root, file, config, dataset_features, parent_level = 0
 	#restoration
 	columns = df.shape[1]
 	for i in range(0, columns-1):
-		column_name = df.columns[i]; column_type = df[column_name].dtypes
+		column_name = df.columns[i]; column_type = df_copy[column_name].dtypes
 		if column_type != 'object' and column_name != winner_name:
 			df[column_name] = df_copy[column_name]
 	
