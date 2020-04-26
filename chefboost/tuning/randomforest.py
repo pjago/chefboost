@@ -78,7 +78,7 @@ def apply(df, config, header, dataset_features):
 			
 		#-------------------------------
 		classified = 0
-		for index, instance in df.iterrows():
+		for index in range(0, len(actual_values)):
 			
 			actual = actual_values[index]
 			predictions = []
